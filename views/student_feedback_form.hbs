@@ -1,0 +1,69 @@
+
+
+<div class="row">  <!--for responsive design-->
+
+    <!--    this class allows for the form instructions to be on the left side of the webpage-->
+    <div class="col-md-6">
+        <h2>Instructions</h2>
+        <p>As one of our students, your thoughts, feedback are important to us.</p>
+        <p>Please send them using this form.</p>
+        <p>If you would like us to follow up with you, include your contact information. </p>
+    </div>
+
+    <!--this class allows for the student feedback form to be on the right side of the webpage-->
+    <div class="col-md-6">
+
+        <!--    student feedback form-->
+        <form action="/submit-feedback" method="POST">
+            <!--    this div is a container for the forms header and adds margin and padding, is centered
+            and has a background color-->
+            <div class="header bg-success mb-4 p-1 rounded-4 text-center">
+                <h1>Please provide feedback. <br> You can provide a comment anonymously.</h1>
+            </div>
+
+            <!--  student name text input with bootstrap -->
+            <!--    ***for all inputs... having a label with the same name as the input id allows for better accesibility
+            example: name label... for="student-name"
+                    text input... id="student-name"
+                     as seen below ***-->
+            <label class="form-label" for="student-name">Name</label>
+            <input class="form-control" id="student-name" type="text" name="name" required>
+            <br>
+
+            <!--    student email input with bootstrap-->
+            <label class="form-label" for="student-email">email</label>
+            <input class="form-control" id="student-email" type="email" name="email">
+            <br>
+
+            <!--    text area input with bootstrap-->
+            <label class="form-label" for="student-comments">Comments</label>
+            <br>
+            <textarea class="form-control" id="student-comments" name="comments" required></textarea>
+            <br>
+            <br>
+            <label class="mx-2">Are you a current student?</label>
+            <br>
+
+            <!--    radio buttons with bootstrap
+            both yes and no buttons must have separate divs but must have the same name to be able to deselect if another radio
+            button is selected... checked means a radio button is checked automatically-->
+            <div class="form-check">
+                <input class="form-check-input" id="student-yes" name="current-student" type="radio" value="yes" checked>
+                <label class="form-check-label" for="student-yes">Yes</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" id="student-no" name="current-student" type="radio" value="no">
+                <label class="form-check-label" for="student-no">No</label>
+            </div>
+
+            <br>
+            <!--    submit button with bootstrap-->
+            <input class="btn btn-primary" type="submit">
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
